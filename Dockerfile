@@ -1,5 +1,4 @@
-FROM alpine:3.12.4
+FROM rust:1.52.1
 
-RUN apk --update add --no-cache cargo
 RUN cargo install cfn-guard
 ENV PATH "/root/.cargo/bin:${PATH}"
